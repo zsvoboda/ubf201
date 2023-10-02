@@ -107,8 +107,8 @@ read -p "Press any key to use the NFS4.1 ACLs to grant Steven access to Rose's h
 
 printf "\n\n"
 
-echo sudo -u rose bash -c 'nfs4_setfacl -a A::28210:RX /mnt/home/rose'
-sudo -u rose bash -c 'nfs4_setfacl -a A::28210:RX /mnt/home/rose'
+echo sudo -u rose bash -c 'nfs4_setfacl -a A::steven:RX /mnt/home/rose'
+sudo -u rose bash -c 'nfs4_setfacl -a A::steven:RX /mnt/home/rose'
 
 printf "\n\n"
 
@@ -116,8 +116,8 @@ read -p "Press any key to use the NFS4.1 ACLs to grant Steven access to Rose's m
 
 printf "\n\n"
 
-echo sudo -u rose bash -c 'nfs4_setfacl -a A::28210:RX /mnt/home/rose/my_file.txt'
-sudo -u rose bash -c 'nfs4_setfacl -a A::28210:RX /mnt/home/rose/my_file.txt'
+echo sudo -u rose bash -c 'nfs4_setfacl -a A::steven:RX /mnt/home/rose/my_file.txt'
+sudo -u rose bash -c 'nfs4_setfacl -a A::steven:RX /mnt/home/rose/my_file.txt'
 
 printf "\n\n"
 
