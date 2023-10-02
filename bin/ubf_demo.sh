@@ -100,3 +100,59 @@ echo sudo -u steven ls -lah /mnt/home/rose
 sudo -u steven ls -lah /mnt/home/rose
 
 printf "\n\n"
+
+# Now, we'll use the NFS4.1 ACLs to grant Steven access to Rose's home directory
+
+read -p "Press any key to use the NFS4.1 ACLs to grant Steven access to Rose's home directory ..." 
+
+printf "\n\n"
+
+echo sudo -u rose bash -c 'nfs4_setfacl -a A::28210:RX /mnt/home/rose'
+sudo -u rose bash -c 'nfs4_setfacl -a A::28210:RX /mnt/home/rose'
+
+printf "\n\n"
+
+read -p "Press any key to use the NFS4.1 ACLs to grant Steven access to Rose's my_file.txt file ..." 
+
+printf "\n\n"
+
+echo sudo -u rose bash -c 'nfs4_setfacl -a A::28210:RX /mnt/home/rose/my_file.txt'
+sudo -u rose bash -c 'nfs4_setfacl -a A::28210:RX /mnt/home/rose/my_file.txt'
+
+printf "\n\n"
+
+read -p "Press any key to to display the rose's home directory ACL permissions ..." 
+
+printf "\n\n"
+
+echo sudo -u rose bash -c 'nfs4_getfacl /mnt/home/rose'
+sudo -u rose bash -c 'nfs4_getfacl /mnt/home/rose'
+
+printf "\n\n"
+
+read -p "Press any key to to display the rose's demo file ACL permissions ..." 
+
+printf "\n\n"
+
+echo sudo -u rose bash -c 'nfs4_getfacl /mnt/home/rose/my_file.txt'
+sudo -u rose bash -c 'nfs4_getfacl /mnt/home/rose/my_file.txt'
+
+printf "\n\n"
+
+read -p "Press any key to find out whether Steven can now list the rose's home directory?" 
+
+printf "\n\n"
+
+echo sudo -u steven bash -c 'ls -lah /mnt/home/rose/'
+sudo -u steven bash -c 'ls -lah /mnt/home/rose/'
+
+printf "\n\n"
+
+read -p "Press any key to find out whether Steven can now read the rose's demo file?" 
+
+printf "\n\n"
+
+echo sudo -u steven bash -c 'cat /mnt/home/rose/my_file.txt'
+sudo -u steven bash -c 'cat /mnt/home/rose/my_file.txt'
+
+printf "\n\n"
