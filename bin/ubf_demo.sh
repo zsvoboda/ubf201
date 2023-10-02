@@ -84,7 +84,7 @@ read -p "Press any key to test Steven's access to Rose's home directory ..."
 
 printf "\n\n"
 
-echo sudo -u steven ls -lah /tmp/mnt/home/rose
-sudo -u steven ls -lah /tmp/mnt/home/rose
+echo sudo -u steven ls -lah /mnt/home/rose
+sudo -u steven ls -lah /mnt/home/rose
 
 printf "\n\n"
