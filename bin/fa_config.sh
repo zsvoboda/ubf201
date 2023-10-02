@@ -88,6 +88,7 @@ fi
 if [ "\$resetgw" = "1" ]; then
     service middleware restart
     service filegw restart
+    pureadm restart
     pureadm wait
 fi
 
