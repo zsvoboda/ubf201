@@ -15,8 +15,8 @@ if [ "$1" = "cleanup" ]; then
 fi
 
 if [ "$1" = "setup" ]; then
-    sudo addgroup --gid 28100 product
-    sudo addgroup --gid 28200 sales
+    sudo addgroup --gid 28100 sales
+    sudo addgroup --gid 28200 product
 
     sudo adduser --no-create-home --disabled-password  --uid 28110 --gid 28100 rose
     sudo adduser --no-create-home --disabled-password  --uid 28210 --gid 28200 steven

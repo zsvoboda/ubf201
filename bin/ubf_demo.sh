@@ -63,12 +63,14 @@ printf "\n\n"
 echo sudo -u rose bash -c 'printf  "Woo hoo, I can read this file!" > /mnt/home/rose/my_file.txt'
 sudo -u rose bash -c 'printf  "Woo hoo, I can read this file!" > /mnt/home/rose/my_file.txt'
 sudo chown rose:sales /mnt/home/rose/my_file.txt
+sudo chmod 750 /mnt/home/rose/my_file.txt
 
 printf "\n\n"
 
 echo sudo -u steven bash -c 'printf  "Woo hoo, I can read this file!" > /mnt/home/steven/my_file.txt'
 sudo -u steven bash -c 'printf  "Woo hoo, I can read this file!" > /mnt/home/steven/my_file.txt'
 sudo chown steven:product /mnt/home/steven/my_file.txt
+sudo chmod 750 /mnt/home/steven/my_file.txt
 
 printf "\n\n"
 read -p "Press any key to continue ..."
