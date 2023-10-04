@@ -85,7 +85,7 @@ purepolicy autodir add --dir fs_shared:md_home_dir p_home_dir_autodir
 # NFS export policy
 echo "Creating NFS export policy"
 purepolicy nfs create p_home_dir_nfs
-purepolicy nfs rule add --client "*" --no-root-squash --anonuid 65534 --anongid 65534 --version nfsv3,nfsv4 p_home_dir_nfs
+purepolicy nfs rule add --client "*" --no-root-squash --anonuid 65534 --anongid 65534 --version nfsv4 p_home_dir_nfs
 
 # NFS export
 echo "Creating NFS export"

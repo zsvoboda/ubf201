@@ -120,7 +120,7 @@ sudo bash -c 'nfs4_getfacl /mnt/home/rose/my_file.txt'
 
 printf "\n\n"
 
-read -p "Press any key to find out whether Steven can now list the rose's home directory?" 
+read -p "Press any key to find out whether Steven can now list the Rose's home directory?" 
 
 printf "\n\n"
 
@@ -129,7 +129,7 @@ sudo -u steven bash -c 'ls -lah /mnt/home/rose/'
 
 printf "\n\n"
 
-read -p "Press any key to find out whether Steven can now read the rose's demo file?" 
+read -p "Press any key to find out whether Steven can now read the Rose's demo file?" 
 
 printf "\n\n"
 
@@ -137,3 +137,33 @@ echo sudo -u steven bash -c 'cat /mnt/home/rose/my_file.txt'
 sudo -u steven bash -c 'cat /mnt/home/rose/my_file.txt'
 
 printf "\n\n"
+
+# Testing whether Rose has access to Steven's home directory
+printf "\n\n"
+read -p "Press any key to test Rose's access to Steven's home directory ..."
+
+printf "\n\n"
+
+echo sudo -u rose ls -lah /mnt/home/steven
+sudo -u rose ls -lah /mnt/home/steven
+
+printf "\n\n"
+
+read -p "Press any key to find out whether Rose can now list the Setven's home directory?" 
+
+printf "\n\n"
+
+echo sudo -u rose bash -c 'ls -lah /mnt/home/steven/'
+sudo -u rose bash -c 'ls -lah /mnt/home/steven/'
+
+printf "\n\n"
+
+read -p "Press any key to find out whether Rose can now read the Steven's demo file?" 
+
+printf "\n\n"
+
+echo sudo -u rose bash -c 'cat /mnt/home/steven/my_file.txt'
+sudo -u rose bash -c 'cat /mnt/home/steven/my_file.txt'
+
+printf "\n\n"
+
