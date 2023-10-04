@@ -15,10 +15,6 @@ printf "\n\n"
 echo sudo mount -t nfs -o vers=4.1 ${FA_MOUNT_IP}:/HOME /mnt/home/    
 sudo mount -t nfs -o vers=4.1 ${FA_MOUNT_IP}:/HOME /mnt/home/
 
-printf "\n\n"
-read -p "Press any key to continue ..."
-printf "\n\n"
-
 # Removing the /mnt/home/* directories if they exist
 sudo rm -rf /mnt/home/rose
 sudo rm -rf /mnt/home/steven
@@ -46,10 +42,6 @@ sudo chown steven:product /mnt/home/steven
 echo sudo chmod 750 /mnt/home/steven
 sudo chmod 750 /mnt/home/steven
 
-printf "\n\n"
-read -p "Press any key to continue ..."
-printf "\n\n"
-
 # Creating the my_file.txt demo files in each home directory
 
 printf "\n\n"
@@ -68,10 +60,6 @@ echo sudo -u steven bash -c 'printf  "Woo hoo, I can read this file!" > /mnt/hom
 sudo -u steven bash -c 'printf  "Woo hoo, I can read this file!" > /mnt/home/steven/my_file.txt'
 sudo chown steven:product /mnt/home/steven/my_file.txt
 sudo chmod 750 /mnt/home/steven/my_file.txt
-
-printf "\n\n"
-read -p "Press any key to continue ..."
-printf "\n\n"
 
 # Testing whether Steven has access to his home directory
 
