@@ -71,10 +71,7 @@ printf "\n\n"
 echo sudo -u steven ls -lah /mnt/home/steven
 sudo -u steven ls -lah /mnt/home/steven
 
-printf "\n\n"
-
 # Testing whether Steven has access to Rose's home directory
-
 printf "\n\n"
 read -p "Press any key to test Steven's access to Rose's home directory ..."
 
