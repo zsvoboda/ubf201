@@ -17,7 +17,6 @@ sudo mount -t nfs -o vers=4.1 ${FA_MOUNT_IP}:/HOME /mnt/home/
 
 printf "\n\n"
 read -p "Press any key to continue ..."
-clear 
 printf "\n\n"
 
 # Removing the /mnt/home/* directories if they exist
@@ -25,7 +24,6 @@ sudo rm -rf /mnt/home/rose
 sudo rm -rf /mnt/home/steven
 
 # Creating home directories, changing ownership and permissions (750)
-clear 
 printf "\n\n"
 
 read -p "Press any key to create home directories ..."
@@ -50,7 +48,6 @@ sudo chmod 750 /mnt/home/steven
 
 printf "\n\n"
 read -p "Press any key to continue ..."
-clear 
 printf "\n\n"
 
 # Creating the my_file.txt demo files in each home directory
@@ -74,7 +71,6 @@ sudo chmod 750 /mnt/home/steven/my_file.txt
 
 printf "\n\n"
 read -p "Press any key to continue ..."
-clear 
 printf "\n\n"
 
 # Testing whether Steven has access to his home directory
